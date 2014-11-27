@@ -1,5 +1,5 @@
 #include "Man.h"
-
+//snilld
 
 Man::Man()
 {
