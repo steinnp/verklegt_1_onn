@@ -22,6 +22,8 @@ void search(vector<Man> famousProgrammer){
     
     char option;
     int invalid;
+    string name;
+    int year;
     
     do{
         cout << "What would you like to search for? \npress:\n1 for first name \n2 for last name\n";
@@ -31,11 +33,12 @@ void search(vector<Man> famousProgrammer){
         switch(option){
             case '1':
                 cout << "First name: ";
-                searchName(option, famousProgrammer);
+                cin >> name;
+                searchName(false, famousProgrammer, name);
                 break;
             case '2':
                 cout << "Last name: ";
-                searchName(option, famousProgrammer);
+                searchName(true, famousProgrammer);
                 break;
             case '3':
                 cout << "Gender(m/f): ";
@@ -43,11 +46,13 @@ void search(vector<Man> famousProgrammer){
                 break;
             case '4':
                 cout << "Year of birth: ";
-                searchYear(option, famousProgrammer);
+                cin >> year;
+                searchYear(true, famousProgrammer, year);
                 break;
             case '5':
                 cout << "Year of death: ";
-                searchYear(option, famousProgrammer);
+                cin >> year;
+                searchYear(false, famousProgrammer, year);
                 break;
             case '6':
                 return;
