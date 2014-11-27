@@ -30,7 +30,7 @@ ofstream& operator << (ofstream& os, Man& m1)
 ifstream& operator >> (ifstream& is, Man& m1)
 {
     cout << "Ifstream" << endl;
-    cout << "First Nam: ";
+    cout << "First Name: ";
     is >> m1.firstName;
     cout << "Last Name: ";
     is >> m1.lastName;
