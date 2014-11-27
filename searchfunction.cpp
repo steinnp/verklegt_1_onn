@@ -1,3 +1,14 @@
+//
+//  searchfunction.cpp
+//  skil1_verklegt
+//
+//  Created by Steinn Elliði Pétursson on 27/11/14.
+//  Copyright (c) 2014 Steinn Elliði Pétursson. All rights reserved.
+//
+
+#include "searchfunction.h"
+
+
 #include <iostream>
 #include <string>
 #include <cctype>
@@ -8,7 +19,7 @@ using namespace std;
 int continueSearch();
 
 void search(vector<Man> famousProgrammer){
-
+    
     char option;
     int invalid;
     
@@ -28,7 +39,7 @@ void search(vector<Man> famousProgrammer){
                 break;
             case '3':
                 cout << "Gender(m/f): ";
-               searchGender(famousProgrammer);
+                searchGender(famousProgrammer);
                 break;
             case '4':
                 cout << "Year of birth: ";
@@ -41,14 +52,14 @@ void search(vector<Man> famousProgrammer){
             case '6':
                 return;
             default:
-                    cout << "Invalid input\n";
+                cout << "Invalid input\n";
         }
         do{
             cout << "Would you like to make another search(y/n)? ";
             invalid = continueSearch();
         }
         while(invalid == 0);
-            }
+    }
     while(invalid == 1);
 }
 
