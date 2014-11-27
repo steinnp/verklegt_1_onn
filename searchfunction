@@ -1,0 +1,67 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+
+using namespace std;
+
+int search(){
+
+    char option;
+    int invalid;
+    
+    do{
+        cout << "What would you like to search for? \npress:\n1 for first name \n2 for last name\n";
+        cout << "3 for gender \n4 for year of birth \n5 for year of death \n6 to return\n";
+        cin >> option;
+        
+        switch(option){
+            case '1':
+                cout << "First name: ";
+                //  searchName(option);
+                break;
+            case '2':
+                cout << "Last name: ";
+                //searchName(option);
+                break;
+            case '3':
+                cout << "Gender(m/f): ";
+               // searchGender();
+                break;
+            case '4':
+                cout << "Year of birth: ";
+               // searchYear(option);
+                break;
+            case '5':
+                cout << "Year of death: ";
+                //searchYear(option);
+                break;
+            case '6':
+                return 0;
+            default:
+                    cout << "Invalid input\n";
+        }
+        do{
+            cout << "Would you like to make another search(y/n)? ";
+            invalid = continueSearch();
+        }
+        while(invalid == 0);
+            }
+    while(invalid == 1);
+    return 0;
+}
+
+int continueSearch(){
+    char option;
+    cin >> option;
+    if(option == 'n' || option == 'N'){
+        return 2;
+    }
+    else if(option == 'y' || option == 'Y'){
+        return 1;
+    }
+    else{
+        cout << "options are y and n\n";
+        return 0;
+    }
+    return 0;
+}
