@@ -1,11 +1,10 @@
 #include "Database.h"
-#include "Man.h"
 
 Database::Database()
 {
+    //cout << "Database constructed." << endl;
     ifstream datafile;
     datafile.open("data.txt");
-    Man temp;
     string tfirst;
     string tlast;
     char tgen;
@@ -34,10 +33,22 @@ Database::~Database()
     }
     datafile.close();
 }
+vector<Man> Database::getData()
+{
+    return data;
+}
+void Database::setData(vector<Man> v)
+{
+    data = v;
+}
 void Database::display()
 {
     for(unsigned int i = 0; i < data.size(); i++)
     {
         cout << data[i];
     }
+}
+void Database::add(Man m1)
+{
+    data.push_back(m1);
 }

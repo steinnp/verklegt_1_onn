@@ -1,9 +1,11 @@
 #ifndef DATABASE_H
 #define DATABASE_H
+
 #include <vector>
-#include "Man.h"
 #include <iostream>
 #include <fstream>
+
+#include "Man.h"
 
 class Database
 {
@@ -11,7 +13,9 @@ class Database
         Database();
         ~Database();
         void display();
-    protected:
+        void add(Man m1);
+        vector<Man> getData();
+        void setData(vector<Man> v);
     private:
         vector<Man> data;
 };

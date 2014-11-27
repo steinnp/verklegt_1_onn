@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+
 using namespace std;
 class Man{
 private:
@@ -15,6 +16,10 @@ private:
 public:
     Man();
     Man(string fname, string lname, char gen, int byear, int dyear);
+    string getFirst();
+    string getLast();
+    int getBirthyear();
+    int getDeathyear();
     friend ofstream& operator << (ofstream& os, Man& m1);
     friend ifstream& operator >> (ifstream& is, Man& m1);
     friend ostream& operator << (ostream& os, Man& m1);

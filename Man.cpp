@@ -1,8 +1,9 @@
 #include "Man.h"
-//snilld
+
 
 Man::Man()
 {
+    //cout << "Man constructed." << endl;
     firstName = "";
     lastName = "";
     gender = 'n';
@@ -11,6 +12,7 @@ Man::Man()
 }
 Man::Man(string fname, string lname, char gen, int byear, int dyear)
 {
+    //cout << "Man constructed." << endl;
     firstName = fname;
     lastName = lname;
     gender = gen;
@@ -67,4 +69,20 @@ istream& operator >> (istream& is, Man& m1)
     is >> m1.deathyear;
 
     return is;
+}
+string Man::getFirst()
+{
+    return firstName;
+}
+string Man::getLast()
+{
+    return lastName;
+}
+int Man::getBirthyear()
+{
+    return birthyear;
+}
+int Man::getDeathyear()
+{
+    return deathyear;
 }
